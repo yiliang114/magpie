@@ -1,0 +1,47 @@
+{
+  "summary": "「用量 → 会话」页签的列表改为按服务端返回的区间会话集合筛选（Stats 新增 keys 字段，app.js 用它在渲染列表时判断成员），不再拿每个会话文件最后一行的日期去猜区间；没有 keys 时保留旧的按最后一行过滤。",
+  "scenes": [
+    {
+      "title": "用量 → 会话：7 天区间",
+      "shots": [
+        {
+          "file": "01-sessions-7d-kpi.png",
+          "caption": "7 天：会话页签上方的会话数与 token、费用等",
+          "width": 2560
+        },
+        {
+          "file": "02-sessions-7d-list.png",
+          "caption": "7 天：会话页签下方的会话列表及其注脚",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "用量 → 会话：30 天区间",
+      "shots": [
+        {
+          "file": "03-sessions-30d-kpi.png",
+          "caption": "30 天：会话页签上方的会话数",
+          "width": 2560
+        },
+        {
+          "file": "04-sessions-30d-list.png",
+          "caption": "30 天：会话列表及其下方的会话数",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "用量 → 会话：7 天区间 · click #period button: nothing visible matches #period button with \"7 天\" (1 in the page)",
+    "用量 → 会话：30 天区间 · click #period button: nothing visible matches #period button with \"30 天\" (1 in the page)"
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "这个沙盒跑的就是本 PR 的代码，所以看不到改动前「按文件最后一行猜区间、列表比 KPI 多出几个会话」的样子，也没有旧二进制来演示 stats 不带 keys 时的回落（要旧版本才看得到）；另外列表里到底会不会出现「最后一行在区间内、区间内却没用量」的会话，取决于沙盒自己的会话文件，不一定每个区间都对得上描述里的数字。",
+  "interactive": true,
+  "pages": 1
+}

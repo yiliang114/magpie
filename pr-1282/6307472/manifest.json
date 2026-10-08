@@ -1,0 +1,44 @@
+{
+  "summary": "远程 magpie 供应商现在会在取模型列表时一并请求并识别远端显式标记的决策模型（含 Clef 与自定义名），供应商编辑器因此拿到一份权威的决策模型列表（可以为空），不再按名字把 Jev Router 之类的聊天模型猜成决策模型；决策、检索与媒体请求也带上了调用方/会话归属。",
+  "scenes": [
+    {
+      "title": "Remote magpie 供应商的编辑器入口",
+      "shots": [
+        {
+          "file": "01-provider-add-sheet.png",
+          "caption": "供应商类型面板",
+          "width": 2496
+        },
+        {
+          "file": "02-remote-magpie-editor.png",
+          "caption": "Remote magpie 的表单：地址与密钥，决策模型列表要保存并读到远端列表后才在这里出现",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "网关 System One 的模型行",
+      "shots": [
+        {
+          "file": "03-gateway-systemone.png",
+          "caption": "System One 的示例与模型行：决策模型会出现在这一行",
+          "width": 2496
+        },
+        {
+          "file": "04-gateway-models-list.png",
+          "caption": "网关模型列表",
+          "width": 2496
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "描述里说的「刷新后决策模型出现在编辑器」沿用已有的供应商列表与刷新按钮，diff 没有新增页面、按钮或设置项；TUI 报错、图片/视频、嵌入与重排等路径都在后端，界面上没有对应改动。",
+  "unseen": "沙盒里没有 remote magpie 供应商，也没有任何决策模型、更没有名为 Jev Router 的聊天模型，所以编辑器里那份决策模型列表（尤其是为空时不再猜 Jev）和网关 System One 示例中的决策模型都出现不了；只能展示这些改动会落到的地方本身。",
+  "interactive": true,
+  "pages": 2
+}

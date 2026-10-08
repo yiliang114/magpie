@@ -1,0 +1,51 @@
+{
+  "summary": "本机预设（Ollama、LM Studio、oMLX）的供应商编辑器在密钥字段下方新增了一个默认折叠的「服务器地址」区：可以填另一个端口或另一台电脑的地址，下方终结点预览随之变化，地址不合法时会展开该区、聚焦输入框并给出提示；LM Studio 与 oMLX 的说明文字改为「默认端口 1234/8000」。",
+  "scenes": [
+    {
+      "title": "本机预设的服务器地址",
+      "shots": [
+        {
+          "file": "01-add-sheet.png",
+          "caption": "预设列表里的本机预设：Ollama、LM Studio、oMLX",
+          "width": 2496
+        },
+        {
+          "file": "02-editor-folded.png",
+          "caption": "Ollama 的编辑器：密钥下方是折叠的「服务器地址」",
+          "width": 1296
+        },
+        {
+          "file": "03-editor-folded.png",
+          "caption": "Ollama 的编辑器：密钥下方是折叠的「服务器地址」",
+          "width": 1296
+        },
+        {
+          "file": "04-address-open.png",
+          "caption": "地址框为空，占位符是预设的 http://localhost:11434",
+          "width": 1224
+        },
+        {
+          "file": "05-endpoints-moved.png",
+          "caption": "填了地址后编辑器下方的终结点",
+          "width": 1120
+        },
+        {
+          "file": "06-address-refused.png",
+          "caption": "点「添加」后的编辑器",
+          "width": 1296
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "本机预设的服务器地址 · click details.more > summary: nothing visible matches details.more > summary (0 in the page)"
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "沙盒里没有已添加的本机预设（只有 DeepSeek、Sub2API Relay、Acme Cloud、Codex），所以看不到「已保存的地址不是默认值时编辑器默认展开」的编辑态，也无法对着真实 Ollama/LM Studio 点「测试」看地址是否生效——这里只能新建时把地址填进去。TUI 里添加本机预设先问地址、按 w 改地址，以及 CLI 用法里新增的那行示例，都不在浏览器界面内。",
+  "interactive": true,
+  "pages": 1
+}
